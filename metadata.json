@@ -1,0 +1,6 @@
+{
+  "name": "English Quest Grade 5",
+  "description": "Interactive educational game for Grade 5 English learning with chapters, mini-games, and offline progress tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

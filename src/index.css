@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-shake: shake 0.4s ease-in-out;
+  --animate-pulseOnce: pulseOnce 1s ease-out;
+  --animate-bounceSlow: bounceSlow 3s ease-in-out infinite;
+  --animate-pulseSlow: pulseSlow 2.5s ease-in-out infinite;
+  --animate-fadeIn: fadeIn 0.3s ease-out;
+  --animate-slideDown: slideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom CSS Keyframes and 3D Cards utilities */
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+@keyframes pulseOnce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.025); box-shadow: 0 0 16px rgba(79, 70, 229, 0.4); }
+  100% { transform: scale(1); }
+}
+
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(0.97); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { height: 0; opacity: 0; }
+  to { height: auto; opacity: 1; }
+}
+
+/* 3D Flashcard Transitions */
+.perspective-\[1000px\] {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+.perspective-\[1200px\] {
+  perspective: 1200px;
+  -webkit-perspective: 1200px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+/* Scrollbar behaviors */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Accessibility high contrast enhancements */
+.high-contrast {
+  filter: contrast(1.15) saturate(1.1);
+}
